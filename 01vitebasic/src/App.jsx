@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>// this is a fragment
+    <>
       <Sumit />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

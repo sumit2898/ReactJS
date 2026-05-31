@@ -21,6 +21,14 @@ function App() {
   const removeValue = () => {
     if (counter > 0){
       setCounter(counter - 1)
+
+      // setCounter(precounter => precounter+1)
+      // setCounter(precounter => precounter+1)
+      // setCounter(precounter => precounter+1)
+      // setCounter(precounter => precounter+1)
+      // to put bundle of change at once 
+      // SetCounter is call function user preCounter as previous data
+      
     } else {
       console.log("negative numbers")
     }
