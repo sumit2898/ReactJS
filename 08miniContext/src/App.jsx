@@ -6,15 +6,18 @@ import './App.css'
 import UserContextProvider from './context/UserContextProvider'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <UserContextProvider className='bg-gray-500'>
-      <h1 className='bg-gray-700 text-white flex justify-center my-4 p-4 text-3xl'> Context Api</h1>
-      <Login/>
-      <Profile/>
-      
-    </UserContextProvider>
+    <div className="min-h-screen  flex items-center justify-center bg-slate-100">
+      <div className="w-full max-w-xl px-4">
+        <UserContextProvider>
+          <h1 className="bg-gray-700 text-white text-center my-4 p-4 text-3xl rounded-lg">
+            Context Api
+          </h1>
+          <Login />
+          <Profile />
+        </UserContextProvider>
+      </div>
+    </div>
   )
 }
 
