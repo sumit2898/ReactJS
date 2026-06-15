@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeTodo, updateTodo } from '../features/todo/todoSlice'
+import { FaSquarePlus,FaPenToSquare, FaPencil, FaTrash, FaTrashCan, FaXmark } from "react-icons/fa6"
+import { BsCheckSquareFill } from "react-icons/bs"
 
 function Todo() {
     const todos = useSelector((state) => state.todo)
@@ -48,13 +50,13 @@ function Todo() {
                                             className="px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                                             onClick={saveEdit}
                                         >
-                                            Save
+                                        <BsCheckSquareFill />
                                         </button>
                                         <button
                                             className="px-3 py-1 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400"
                                             onClick={cancelEdit}
                                         >
-                                            Cancel
+                                            <FaXmark />
                                         </button>
                                     </>
                                 ) : (
@@ -63,13 +65,13 @@ function Todo() {
                                             className="px-3 py-1 bg-yellow-400 text-black rounded-md hover:bg-yellow-500"
                                             onClick={() => startEdit(todo)}
                                         >
-                                            Edit
+                                        <FaPenToSquare />
                                         </button>
                                         <button
                                             className="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700"
                                             onClick={() => dispatch(removeTodo(todo.id))}
                                         >
-                                            Delete
+                                          < FaTrashCan/>
                                         </button>
                                     </>
                                 )}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../features/todo/todoSlice'
+import { FaSquarePlus } from 'react-icons/fa6'
 
 function AddTodo() {
     const [input, setInput] = useState('')
@@ -23,7 +24,7 @@ function AddTodo() {
                 onChange={(e) => setInput(e.target.value)}
             />
             <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-4 rounded-r-md">
-                Add
+               <FaSquarePlus/>
             </button>
         </form>
     )
